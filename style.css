@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+
+}
+input{
+    font-family: monospace;
+    line-height:1.2 ;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+    font-size: 2.2rem;
+
+}
+input:focus{
+    outline: none;
+}
+.input-bill{
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.input-custom{
+    width: 8rem;
+    border-radius: 5px;
+    border: none;
+}
+.input-people{
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.calculator{
+    display: flex;
+    width: 80%;
+    margin: 5rem auto;
+    background-color: #fff;
+    border-radius: 11px;
+    padding: 4rem ;
+    gap:5rem;
+
+
+}
+
+.left{
+display: flex;
+flex-direction: column;
+gap: 5rem;
+flex: 0 0 50%;
+
+}
+
+.left-top,
+.left-middle,
+.left-bottom{
+display: flex;
+flex-direction: column;
+gap: 3rem;
+
+}
+
+.left-middle{
+    
+
+}
+.select-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.left-middle button{
+    font-size: 2.2rem;
+    font-family: monospace;
+    border: none;
+    background-color: hsl(183, 100%, 15%);
+    color: #fff;
+    border-radius: 9px;
+    width: 8rem;
+    padding: 1rem 0;
+}
+button{
+    cursor: pointer;
+}
+.btn-reset,
+.btn-calc{
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    border-radius: 5px;
+    font-size: 2.4rem;
+    
+}
+.btn-reset:hover{
+
+}
+.left-middle button:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.left-bottom{
+
+
+}
+
+.right{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 11px;
+    padding: 2rem;
+    color: #fff;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    
+
+}
+
+.right-top,
+.right-middle{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.amount{
+
+
+}
+
+
+.totall{
+
+
+}
+
+.bill-log{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10rem;
+}

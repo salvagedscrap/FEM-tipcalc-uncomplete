@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  
+ 
+  <script src="https://unpkg.com/vue@next" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+
+  <section id="calc">
+    <div class="calculator">
+
+   
+      <div class="left">
+        <div class="left-top">
+          <h3>BILL</h3>
+          <input  v-model="bill" class="input-bill">
+        </div>
+        <div class="left-middle">
+          <h3> Select Tip %</h3>
+          <div class="select-group">
+            <button @click="percentageOne" >5%</button>
+            <button @click="percentageTwo" >10%</button>
+            <button @click="percentageThree" >15%</button>
+            <button @click="percentageFour" >25%</button>
+            <button @click="percentageFive" >50%</button>
+            <input v-model="customPercentage" class="input-custom" placeholder="Custom">
+          </div>
+        </div>
+        <div class="left-bottom">
+          <h3>Number of People</h3>
+          <input type="" name=""  v-model="people" class="input-people">
+        </div>
+  
+        <button @click="calcTip" class="btn-calc"> Calculate</button>
+      </div>
+      <div class="right">
+        <div class="right-top">
+          <div class="tip">
+            <h3>Tip Amount</h3>
+            <p>/ person</p>
+          </div>
+          <div class="amount">
+            <h2 class="tip-amount"> {{ Math.trunc(tipPerPerson) }} </h2>
+          </div>
+        </div>
+        <div class="right-middle">
+          <div class="total">
+            <h3>Total</h3>
+            <p>/ person</p>
+          </div>
+          <div class="totall">
+            <h2 class="total amount"> {{ Math.trunc(totalPerPerson) }} </h2>
+          </div>
+        </div>
+        <button class=" btn-reset" @click="reset">RESET</button>
+      </div>
+  
+    </div>
+      <div class="bill-log">
+        <p v-if="calculatedLog.length === 0">No bills calculated. Please add bills and calculate with given tip percentages</p>
+        <ul v-else>
+          <p>Calculated bills</p>
+          <li v-for=" result in calculatedLog"> total bill is: {{ result }} </li>
+        </ul>
+      </div>
+  </section>
+
+  
+
+
+
+  
+</body>
+</html>
